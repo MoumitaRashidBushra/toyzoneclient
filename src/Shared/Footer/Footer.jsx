@@ -24,8 +24,8 @@ const Footer = () => {
                         <p className="mt-4">Home</p>
                         <p className="mt-3 mb-3">All Toys</p>
                         <p>Add A Toy</p>
-                        <p className="mt-3 mb-3">Blog</p>
-                        <p>My Toys</p>
+                        <p className="mt-3 mb-3">My Toys</p>
+                        <p>Blog</p>
 
                     </div>
 
