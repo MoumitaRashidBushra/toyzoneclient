@@ -27,20 +27,20 @@ const Navber = () => {
                     <div className='mx-2' >
                         {/* <ActiveLink to='/' className='mx-5'>Home</ActiveLink >
                         <ActiveLink to='blog' className='mx-5'>Blog</ActiveLink> */}
-                        <Link to='/' className='mx-4'>Home</Link >
-                        <Link to='allToys' className='mx-4'>All Toys</Link>
+                        <Link to='/' className='mx-2 lg:mx-4'>Home</Link >
+                        <Link to='allToys' className='mx-2 lg:mx-4'>All Toys</Link>
                         {
                             user ?
                                 <>
-                                    <Link to='addAToy' className='mx-4'>Add A Toy</Link>
-                                    <Link to='addAToy' className='mx-4'>My Toys</Link>
+                                    <Link to='addAToy' className='mx-2 lg:mx-4'>Add A Toy</Link>
+                                    <Link to='addAToy' className='mx-2 lg:mx-4'>My Toys</Link>
 
                                 </>
                                 :
 
                                 ""
                         }
-                        <Link to='blog' className='mx-4'>Blog</Link>
+                        <Link to='blog' className='mx-2 lg:mx-4'>Blog</Link>
 
 
                     </div>
