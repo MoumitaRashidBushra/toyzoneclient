@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import MyToysRow from './MyToysRow/MyToysRow';
+import Swal from 'sweetalert2';
 
 const MyToys = () => {
 
@@ -13,6 +14,40 @@ const MyToys = () => {
             .then(res => res.json())
             .then(data => setMyToys(data))
     }, [])
+
+
+    const handleDelete = id => {
+        console.log(id)
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/addAToys/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                            const remaining = myToys.filter(myToy => myToy._id !== id);
+                            setMyToys(remaining);
+                        }
+                    })
+            }
+        })
+    }
 
     return (
         <div className='container lg:container lg:mx-auto  lg:px-20 lg:pt-20 pb-20 '>
@@ -38,37 +73,13 @@ const MyToys = () => {
                     </thead>
                     <tbody>
 
-                        {/* <tr>
-
-                            <td>
-                                <div className=" w-24 h-24">
-                                    <img src="https://img.freepik.com/free-vector/boy-driving-mini-car-toy-white-background_1308-76150.jpg?w=740&t=st=1684421705~exp=1684422305~hmac=5c6b53bf2157fe28e4ac142295a5a73df0255f9e9fe4d97f4fd5d6a96018b6a2" alt="Avatar Tailwind CSS Component" />
-                                </div>
-                            </td>
-                            <td>
-                                Yellow Truck
-                            </td>
-                            <td>
-                                truck
-                            </td>
-                            <td>30</td>
-                            <td>4.5</td>
-
-                            <td>230</td>
-
-
-                            <th>
-                                <button className="btn btn-ghost btn-xs">Update</button>
-                            </th>
-                            <th>
-                                <button className="btn btn-ghost btn-xs">Delete</button>
-                            </th>
-                        </tr> */}
 
                         {
                             myToys.map(myToy => <MyToysRow
                                 key={myToy._id}
                                 myToy={myToy}
+                                handleDelete={handleDelete}
+
                             ></MyToysRow>)
                         }
 
