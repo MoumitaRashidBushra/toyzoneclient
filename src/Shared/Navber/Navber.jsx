@@ -33,7 +33,7 @@ const Navber = () => {
                             user ?
                                 <>
                                     <Link to='addAToy' className='mx-2 lg:mx-4'>Add A Toy</Link>
-                                    <Link to='addAToy' className='mx-2 lg:mx-4'>My Toys</Link>
+                                    <Link to='myToys' className='mx-2 lg:mx-4'>My Toys</Link>
 
                                 </>
                                 :

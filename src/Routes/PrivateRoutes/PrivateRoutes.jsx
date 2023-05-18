@@ -8,7 +8,7 @@ const PrivateRoutes = ({ children }) => {
     console.log(location)
 
     if (loading) {
-        return <button className="btn btn-square loading"></button>
+        return <progress className="progress w-56"></progress>
     }
 
 
