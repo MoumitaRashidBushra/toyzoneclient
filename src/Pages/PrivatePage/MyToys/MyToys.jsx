@@ -52,7 +52,7 @@ const MyToys = () => {
     return (
         <div className='container lg:container lg:mx-auto  lg:px-20 lg:pt-20 pb-20 '>
 
-            <h2 className='text-center text-3xl font-semibold pb-6'>My total toys:{myToys.length}</h2>
+            <h2 className='text-center text-4xl font-bold pb-16'>My total toys: {myToys.length}</h2>
 
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
