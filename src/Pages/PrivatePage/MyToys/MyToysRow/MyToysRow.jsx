@@ -30,7 +30,7 @@ const MyToysRow = ({ myToy, handleDelete }) => {
 
 
             <th>
-                <Link to={`/${_id}`}>
+                <Link to={`/update/${_id}`}>
                     <button className="btn btn-ghost btn-xs">Update</button>
                 </Link>
 

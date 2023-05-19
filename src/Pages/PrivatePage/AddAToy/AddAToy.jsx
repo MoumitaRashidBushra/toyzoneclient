@@ -61,6 +61,7 @@ const AddAToy = () => {
 
     return (
         <div className='container lg:container lg:mx-auto  lg:px-20 lg:pt-8 pb-6 '>
+            <h2 className='text-center text-4xl font-bold pt-10 pb-6'>Add A Brand New Toy!!!</h2>
             <form onSubmit={handleAddAToy} >
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 pt-8  mb-6 px-20 '>
 
