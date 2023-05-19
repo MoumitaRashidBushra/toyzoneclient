@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const MyToysRow = ({ myToy, handleDelete }) => {
@@ -29,7 +30,10 @@ const MyToysRow = ({ myToy, handleDelete }) => {
 
 
             <th>
-                <button className="btn btn-ghost btn-xs">Update</button>
+                <Link to={`/${_id}`}>
+                    <button className="btn btn-ghost btn-xs">Update</button>
+                </Link>
+
             </th>
             <th>
                 <button
