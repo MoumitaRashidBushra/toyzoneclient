@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+import ShopCategory from '../ShopCategory/ShopCategory';
+//import 'react-tabs/style/react-tabs.css';
+import { FaStar } from "react-icons/fa";
 
 const Home = () => {
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
+
     return (
 
         <div>
             <section>
                 <div className=' bg-slate-100 mb-14'>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-2 lg:gap-16 lg:container lg:mx-auto px-5 lg:px-20 lg:pt-8 pb-20'>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-2 lg:gap-16 lg:container lg:mx-auto px-10 lg:px-20 lg:pt-8 pb-20'>
                         <div>
-                            <img src="https://img.freepik.com/free-vector/children-repairing-car-together_1308-77962.jpg?w=826&t=st=1684389722~exp=1684390322~hmac=d1cee48babe33225ef2479d05c52d17f207fdea273c52db4cb15c441fdd9a525" alt="" className='pb-8 pt-2' />
+                            <img src="https://cdn.pixabay.com/photo/2023/04/14/04/11/fox-7923995_960_720.png" alt="" className='pb-8 pt-2' />
                         </div>
                         <div>
                             <h1 className='text-4xl lg:text-5xl font-semibold text-black'>Unlock Adventure <br /> and Wonder at<br /> <span className='text-indigo-600'> Toy Zone!</span></h1>
@@ -68,7 +80,7 @@ const Home = () => {
                         </div>
 
                     </div>
-                    <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6  mb-24 px-20'>
+                    <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6  mb-6 px-20'>
 
                         <div>
                             <img src="https://img.freepik.com/free-photo/car-germany-map-with-pinpoint-line_23-2148232482.jpg?w=740&t=st=1684395581~exp=1684396181~hmac=ea62af1b8e80528939769fa92ab45af6843f5044c80a9b16f5865e9955e213d3" alt="" />
@@ -85,6 +97,97 @@ const Home = () => {
 
                     </div>
 
+                </div>
+            </section>
+
+            <section className=' bg-slate-100'>
+                <div className='lg:container lg:mx-auto px-5 lg:px-20 lg:pt-4 '>
+                    <h1 className=' pt-12 text-center text-4xl lg:text-5xl font-semibold text-black'> Toys Category  </h1>
+                    <p className='text-center pt-6 px-6 pb-4'>Shopping now at Toy Zone allows you to explore a wide variety of toys, shop conveniently from  the comfort <br /> of your home, and provide children with
+                        engaging and enjoyable play experiences. </p>
+
+                </div>
+            </section>
+
+            <section className=' bg-slate-100'>
+                <ShopCategory></ShopCategory>
+
+            </section>
+
+            <section >
+                <div className='lg:container lg:mx-auto px-5 lg:px-20 lg:pt-4 '>
+                    <h1 className=' pt-12 text-center text-4xl lg:text-5xl font-semibold text-black'> Our Client Review  </h1>
+                    <p className='text-center pt-6 px-6 pb-4'>Delighted Customer Shares Their Fantastic Experience with Toy Zone: A True Toy Wonderland! </p>
+
+                </div>
+            </section>
+
+            <section>
+                <div className='lg:container lg:mx-auto px-5 lg:px-20 lg:pt-10 pt-10 '>
+                    <div className='grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-10  mb-16 lg:px-20 px-5'>
+
+                        <div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                            <div className="card w-full bg-base-100 shadow  ">
+                                <figure><img src="https://img.freepik.com/free-photo/kid-playing-home_23-2148131061.jpg?w=740&t=st=1684504982~exp=1684505582~hmac=a97df4de954cacb5a6e6718f73fb48df045c4d27f0a573af5d16e29fa1579062" alt="Shoes" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title text-2xl">Moumita Rashid</h2>
+
+                                    <p className='pt-3'>I recently had the pleasure of shopping at Toy Zone, and I am thrilled to share my exceptional experience with fellow toy enthusiasts. From the moment I entered their store.</p>
+
+                                    <div className="card-actions justify-start text-orange-400 pt-5">
+                                        <FaStar></FaStar>
+                                        <FaStar></FaStar>
+                                        <FaStar></FaStar>
+                                        <FaStar></FaStar>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="card w-full bg-base-100 shadow">
+                            <figure><img src="https://img.freepik.com/free-photo/kid-playing-with-toy-train_23-2148131033.jpg?w=740&t=st=1684506204~exp=1684506804~hmac=37c28db666ed02802c045b5761ca0c511a23072b47dc1ed69865ebab3f2c06d6" alt="Shoes" /></figure>
+                            <div className="card-body">
+                                <h2 className="card-title text-2xl"></h2>
+                                <h2 className="card-title text-2xl">Moumita Rashid</h2>
+
+                                <p className='pt-3'>The selection of toys at Toy Zone is simply unparalleled. They have carefully curated a diverse collection that caters to various ages, interests, and developmental stages. </p>
+
+                                <div className="card-actions justify-start text-orange-400 pt-5">
+                                    <FaStar></FaStar>
+                                    <FaStar></FaStar>
+                                    <FaStar></FaStar>
+                                    <FaStar></FaStar>
+                                    <FaStar></FaStar>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="card w-full bg-base-100 shadow">
+                            <figure><img src="https://img.freepik.com/free-photo/side-view-little-kid-playing-with-car_23-2149307029.jpg?w=740&t=st=1684506130~exp=1684506730~hmac=318ae611d4e1b14a2d95a1472f8bec3be1c6a203f4b2aa71c0056e29b78383ad" alt="Shoes" /></figure>
+                            <div className="card-body">
+                                <h2 className="card-title text-2xl">Moumita Rashid</h2>
+
+                                <p className='pt-3'>The staff at Toy Zone deserves special commendation. Their knowledge, enthusiasm, and genuine love for toys were evident in every interaction. </p>
+
+                                <div className="card-actions justify-start text-orange-400 pt-5">
+                                    <FaStar></FaStar>
+                                    <FaStar></FaStar>
+                                    <FaStar></FaStar>
+                                    <FaStar></FaStar>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+                    </div>
                 </div>
             </section>
         </div>

@@ -7,7 +7,7 @@ const ViewDetails = () => {
     const { _id, toy_name, photo, sub_category, price, rating, available_quantity, detail_description, name, email, } = viewAll;
 
     return (
-        <div className='container lg:container lg:mx-auto  lg:px-20 lg:pt-8 pb-6 '>
+        <div className='container lg:container lg:mx-auto px-10 lg:px-20 lg:pt-8 pb-6 '>
             <h1 className='text-center text-5xl font-bold pb-10 pt-10'>{toy_name}</h1>
             <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-2 lg:gap-16  pb-20'>
 

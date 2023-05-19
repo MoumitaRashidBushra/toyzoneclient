@@ -13,7 +13,7 @@ const AllToys = () => {
 
 
     return (
-        <div className='container lg:container lg:mx-auto  lg:px-20 lg:pt-20 pb-24 '>
+        <div className='container lg:container lg:mx-auto px-10  lg:px-20 lg:pt-20 pb-24 '>
             <h2 className='text-center text-4xl font-bold pb-16'>All Toys: {allToys.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">

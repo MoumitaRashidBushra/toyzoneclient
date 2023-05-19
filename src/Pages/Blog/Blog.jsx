@@ -3,9 +3,9 @@ import React from 'react';
 const Blog = () => {
     return (
 
-        <div className='lg:container lg:mx-auto px-5 lg:px-20 lg:pt-10 mb-10' >
+        <div className='lg:container lg:mx-auto px-10 lg:px-20 lg:pt-10 mb-10' >
 
-            <h1 className='mt-4 text-2xl font-semibold mb-3 text-justify'>What is an access token and refresh token?How do they work and where should we store them on the client-side?</h1>
+            <h1 className='mt-8 text-2xl font-semibold mb-3 text-justify'>What is an access token and refresh token?How do they work and where should we store them on the client-side?</h1>
             <p className='pb-10 pt-1 text-justify '>An access token is a credential that is issued to a user or an application after a successful authentication process. Access tokens are often short-lived and have an expiration time, after which they are no longer considered valid. This approach enhances security by minimizing the window of time in which an access token can be exploited if compromised.A refresh token is another type of credential that is typically issued alongside an access token during the authentication process. While access tokens are short-lived, refresh tokens have a longer lifespan. They are used to request a new access token without requiring the user to re-enter their credentials or perform the full authentication process again. When a refresh token is used to request a new access token, the server or authorization system verifies its validity and, if valid, issues a fresh access token. Refresh tokens are typically securely stored on the client side  in a browser's local storage or Http only cookies to be used when needed. They are considered sensitive and should be protected to prevent unauthorized access.</p>
 
 

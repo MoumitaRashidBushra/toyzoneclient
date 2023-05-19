@@ -15,7 +15,7 @@ const AddAToy = () => {
         const photo = form.photo.value;
         const name = user?.displayName;
         const email = user?.email;
-        const sub_category = form.subCategory.value;
+        const sub_category = form.sub_category.value;
         const price = form.price.value;
         const rating = form.rating.value;
         const available_quantity = form.availableQuantity.value;
@@ -98,7 +98,7 @@ const AddAToy = () => {
                         <label className="label">
                             <span className="label-text">Sub Category</span>
                         </label>
-                        <select name="subCategory" className='border py-3 px-2 rounded-lg'>
+                        <select name="sub_category" className='border py-3 px-2 rounded-lg'>
                             <option value="sports-car">Sports Car</option>
                             <option value="truck">Truck</option>
                             <option value="mini-police-car">Mini Police Car</option>
