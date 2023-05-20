@@ -41,7 +41,7 @@ const router = createBrowserRouter([
             // {
             //     path: "addAToys/:id",
             //     element: <PrivateRoutes><AddAToy></AddAToy></PrivateRoutes>,
-            //     loader: ({ params }) => fetch(`http://localhost:5000/addAToys/${params.id}`)
+            //     loader: ({ params }) => fetch(`https://toy-zone-server-ten.vercel.app/addAToys/${params.id}`)
             // },
 
             {
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
             {
                 path: "update/:id",
                 element: <PrivateRoutes><UpdateToys></UpdateToys></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/myToys/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-zone-server-ten.vercel.app/myToys/${params.id}`)
             },
             {
                 path: "allToys",
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
             {
                 path: "viewDetails/:id",
                 element: <PrivateRoutes><ViewDetails></ViewDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/alltoy/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-zone-server-ten.vercel.app/alltoy/${params.id}`)
             },
 
 

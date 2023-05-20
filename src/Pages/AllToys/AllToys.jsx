@@ -10,7 +10,7 @@ const AllToys = () => {
     const [toySearch, setToySearch] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/alltoy')
+        fetch('https://toy-zone-server-ten.vercel.app/alltoy')
             .then(res => res.json())
             .then(data => setAllToys(data))
     }, [])
@@ -21,7 +21,7 @@ const AllToys = () => {
         const toySearch = form.search.value;
         console.log(toySearch);
 
-        fetch(`http://localhost:5000/toySearch/${toySearch}`)
+        fetch(`https://toy-zone-server-ten.vercel.app/toySearch/${toySearch}`)
             .then(res => res.json())
             .then(data => setAllToys(data))
 

@@ -14,7 +14,7 @@ const MyToys = () => {
     const [selectedOption, setSelectedOption] = useState('asen');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addAToys?email=${user.email}&sort=${selectedOption}`)
+        fetch(`https://toy-zone-server-ten.vercel.app/addAToys?email=${user.email}&sort=${selectedOption}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
     }, [user, selectedOption])
@@ -33,7 +33,7 @@ const MyToys = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/addAToys/${id}`, {
+                fetch(`https://toy-zone-server-ten.vercel.app/addAToys/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

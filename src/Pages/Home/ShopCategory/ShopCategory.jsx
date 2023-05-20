@@ -10,7 +10,7 @@ const ShopCategory = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/data/${subCategorys}`)
+        fetch(`https://toy-zone-server-ten.vercel.app/data/${subCategorys}`)
             .then(res => res.json())
             .then(data => setData(data))
     }, [subCategorys])
@@ -41,7 +41,7 @@ const ShopCategory = () => {
                 </TabList>
 
                 <TabPanel>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 pt-5 lg:px-20 px-10 '>
+                    <div className='grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 pt-5 lg:px-20 px-10 '>
                         {
                             data.map(sc => <ShopData
                                 key={sc._id}
@@ -53,7 +53,8 @@ const ShopCategory = () => {
 
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 pt-5 lg:px-20 px-10 '>
+                    <div
+                        className='grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20 pt-5 lg:px-20 px-10 '>
                         {
                             data.map(sc => <ShopData
                                 key={sc._id}
@@ -64,7 +65,7 @@ const ShopCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 pt-5 lg:px-20  px-10'>
+                    <div className='grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20 pt-5 lg:px-20  px-10'>
                         {
                             data.map(sc => <ShopData
                                 key={sc._id}

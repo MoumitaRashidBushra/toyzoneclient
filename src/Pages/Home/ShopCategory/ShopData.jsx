@@ -11,10 +11,11 @@ const ShopData = ({ sc }) => {
 
     return (
         <div>
-            <div className="card w-full bg-base-100 shadow-xl border">
-                <figure><img src={photo} alt="Shoes" className='px-10 mx-10 mt-10 ' /></figure>
+            <div
+                className="card w-full bg-base-100 shadow-xl border ">
+                <figure><img src={photo} alt="Shoes" className='px-5 mx-5 mt-5 ' /></figure>
                 <div className="card-body">
-                    <h2 className="card-title text-4xl font-bold">{toy_name}</h2>
+                    <h2 className="card-title text-3xl font-bold">{toy_name}</h2>
                     <p className='pt-2 '><span className='font-bold'>Price :</span> {price} </p>
                     <p className='pt-2 pb-4'><span className='font-bold'>Rating :</span> {rating} </p>
                     <div className="card-actions justify-start">
