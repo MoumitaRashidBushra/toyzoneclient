@@ -9,13 +9,15 @@ const MyToys = () => {
 
     const { user } = useContext(AuthContext);
 
-    const [myToys, setMyToys] = useState([])
+    const [myToys, setMyToys] = useState([]);
+
+    const [selectedOption, setSelectedOption] = useState('asen');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addAToys?email=${user.email}`)
+        fetch(`http://localhost:5000/addAToys?email=${user.email}&sort=${selectedOption}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
-    }, [])
+    }, [user, selectedOption])
 
 
     const handleDelete = id => {
@@ -54,7 +56,22 @@ const MyToys = () => {
     return (
         <div className='container lg:container lg:mx-auto px-10  lg:px-20 lg:pt-20 pb-20 '>
 
-            <h2 className='text-center text-4xl font-bold pt-8 pb-16'>My total toys: {myToys.length}</h2>
+            <h2 className='text-center text-4xl font-bold pt-8 pb-12'>My total toys: {myToys.length}</h2>
+
+            <div className='pb-8 flex flex-col lg:flex-row items-center justify-center'>
+                <label className="label ">
+                    <span className="label-text  text-center">Sort by:</span>
+                </label>
+                <select
+                    onChange={(event) => setSelectedOption(event.target.value)}
+                    name="sort" className='border py-3 px-2 rounded-lg'>
+
+                    <option value={'asen'}>Price (Low to High)</option>
+                    <option value={'dese'}>Price (High to Low)</option>
+
+
+                </select>
+            </div>
 
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">

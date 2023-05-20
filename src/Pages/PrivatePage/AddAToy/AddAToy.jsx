@@ -19,7 +19,7 @@ const AddAToy = () => {
         const name = user?.displayName;
         const email = user?.email;
         const sub_category = form.sub_category.value;
-        const price = form.price.value;
+        const price = parseInt(form.price.value);
         const rating = form.rating.value;
         const available_quantity = form.availableQuantity.value;
         const detail_description = form.detailDescription.value;
@@ -113,7 +113,7 @@ const AddAToy = () => {
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
-                        <input type="text" placeholder="price" name='price' required className="input input-bordered w-full" />
+                        <input type="number" placeholder="price" name='price' required className="input input-bordered w-full" />
                     </div>
 
 
