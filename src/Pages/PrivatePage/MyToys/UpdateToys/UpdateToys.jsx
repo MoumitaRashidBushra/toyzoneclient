@@ -2,8 +2,11 @@ import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../../Provider/AuthProvider';
+import useTitle from '../../../../hooks/useTitle';
 
 const UpdateToys = () => {
+
+    useTitle('UpdateToys')
 
     const updateToys = useLoaderData();
     const { _id, toy_name, photo, sub_category, price, rating, available_quantity, detail_description } = updateToys;

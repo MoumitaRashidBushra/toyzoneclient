@@ -1,7 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../../hooks/useTitle';
 
 const ViewDetails = () => {
+
+
 
     const viewAll = useLoaderData();
     const { _id, toy_name, photo, sub_category, price, rating, available_quantity, detail_description, name, email, } = viewAll;

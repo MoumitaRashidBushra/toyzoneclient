@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import AllToysRow from './AllToysRow';
+import useTitle from '../../hooks/useTitle';
 
 const AllToys = () => {
 
+    useTitle('AllToys')
+
     const [allToys, setAllToys] = useState([])
+    const [toySearch, setToySearch] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:5000/alltoy')
@@ -11,10 +15,41 @@ const AllToys = () => {
             .then(data => setAllToys(data))
     }, [])
 
+    const handleToSearch = event => {
+        event.preventDefault();
+        const form = event.target;
+        const toySearch = form.search.value;
+        console.log(toySearch);
+
+        fetch(`http://localhost:5000/toySearch/${toySearch}`)
+            .then(res => res.json())
+            .then(data => setAllToys(data))
+
+    }
+
 
     return (
         <div className='container lg:container lg:mx-auto px-10  lg:px-20 lg:pt-20 pb-24 '>
-            <h2 className='text-center text-4xl font-bold pb-16'>All Toys: {allToys.length}</h2>
+            <h2 className='text-center text-4xl font-bold pb-10'>All Toys: {allToys.length}</h2>
+
+
+            <form onSubmit={handleToSearch} >
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10  px-20 '>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Search by Toy name</span>
+                        </label>
+
+                        <input type="text" placeholder="Toy name" name='search' required className="input input-bordered w-full" />
+                    </div>
+                    <div className="form-control mt-10 px-20 mb-10">
+                        <input type="submit" value="Search Toy" className="btn btn-info" />
+                    </div>
+                </div>
+
+            </form>
+
+
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
 

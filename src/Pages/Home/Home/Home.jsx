@@ -6,11 +6,19 @@ import 'aos/dist/aos.css';
 import ShopCategory from '../ShopCategory/ShopCategory';
 //import 'react-tabs/style/react-tabs.css';
 import { FaStar } from "react-icons/fa";
+import useTitle from '../../../hooks/useTitle';
+
 
 const Home = () => {
     useEffect(() => {
         AOS.init();
     }, []);
+
+
+
+
+    useTitle('Home');
+
 
 
     return (
