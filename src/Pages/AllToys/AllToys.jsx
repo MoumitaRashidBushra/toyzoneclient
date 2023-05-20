@@ -34,11 +34,9 @@ const AllToys = () => {
 
 
             <form onSubmit={handleToSearch} >
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10  px-20 '>
+                <div className='flex flex-col lg:flex-row items-center justify-center '>
                     <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Search by Toy name</span>
-                        </label>
+
 
                         <input type="text" placeholder="Toy name" name='search' required className="input input-bordered w-full" />
                     </div>

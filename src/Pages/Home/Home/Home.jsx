@@ -134,7 +134,9 @@ const Home = () => {
                 <div className='lg:container lg:mx-auto px-5 lg:px-20 lg:pt-10 pt-10 '>
                     <div className='grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-10  mb-16 lg:px-20 px-5'>
 
-                        <div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                        <div data-aos="fade-down"
+                            data-aos-easing="linear"
+                            data-aos-duration="1500">
                             <div className="card w-full bg-base-100 shadow  ">
                                 <figure><img src="https://img.freepik.com/free-photo/kid-playing-home_23-2148131061.jpg?w=740&t=st=1684504982~exp=1684505582~hmac=a97df4de954cacb5a6e6718f73fb48df045c4d27f0a573af5d16e29fa1579062" alt="Shoes" /></figure>
                                 <div className="card-body">
@@ -153,7 +155,11 @@ const Home = () => {
                         </div>
 
 
-                        <div className="card w-full bg-base-100 shadow">
+
+                        <div data-aos="fade-down"
+                            data-aos-easing="linear"
+                            data-aos-duration="1500"
+                            className="card w-full bg-base-100 shadow">
                             <figure><img src="https://img.freepik.com/free-photo/kid-playing-with-toy-train_23-2148131033.jpg?w=740&t=st=1684506204~exp=1684506804~hmac=37c28db666ed02802c045b5761ca0c511a23072b47dc1ed69865ebab3f2c06d6" alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title text-2xl"></h2>
@@ -171,7 +177,10 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="card w-full bg-base-100 shadow">
+                        <div data-aos="fade-down"
+                            data-aos-easing="linear"
+                            data-aos-duration="1500"
+                            className="card w-full bg-base-100 shadow">
                             <figure><img src="https://img.freepik.com/free-photo/side-view-little-kid-playing-with-car_23-2149307029.jpg?w=740&t=st=1684506130~exp=1684506730~hmac=318ae611d4e1b14a2d95a1472f8bec3be1c6a203f4b2aa71c0056e29b78383ad" alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title text-2xl">Moumita Rashid</h2>
